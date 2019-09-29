@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="contactForm" template="Smile_Contact::form.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="contactForm.select" template="Smile_Contact::select.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="contactForm.slider" template="Smile_Contact::slider.phtml" />
+        </referenceBlock>
+
+        <referenceContainer name="form.additional.info">
+            <block class="Magento\Cms\Block\Block" name="test.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">id_test.block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

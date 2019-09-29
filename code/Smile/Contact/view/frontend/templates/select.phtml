@@ -1,0 +1,23 @@
+<div class="field gender-select">
+    <select class="js-example-placeholder-single js-states form-control" name="gender">
+        <option></option>
+        <option value="mr"><?= $block->escapeHtml(__('Mr')) ?></option>
+        <option value="mrs"><?= $block->escapeHtml(__('Mrs')) ?></option>
+        <option value="other"><?= $block->escapeHtml(__('Other')) ?></option>
+        <option value="test"><?= $block->escapeHtml(__('test')) ?></option>
+    </select>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'js/select2.full'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.js-example-placeholder-single').select2({
+                placeholder: 'Gender',
+                minimumResultsForSearch: Infinity
+            });
+        });
+    });
+</script>
