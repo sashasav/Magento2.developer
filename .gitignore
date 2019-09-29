@@ -1,7 +1,6 @@
 code/Magento
 design/adminhtml
 design/frontend/Magento
-etc/
 i18n/
 .htaccess
 autoload.php
