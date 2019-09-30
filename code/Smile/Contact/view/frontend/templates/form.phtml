@@ -6,7 +6,10 @@
 
 /** @var \Magento\Contact\Block\ContactForm $block */
 ?>
-<h1>test!</h1>
+<h5>test!</h5>
+<div class="owl-carousel-wrapper">
+    <?= $block->getChildHtml('contactForm.slider'); ?>
+</div>
 <form class="form contact"
       action="<?= $block->escapeUrl($block->getFormAction()) ?>"
       id="contact-form"
@@ -16,9 +19,7 @@
     <fieldset class="fieldset">
         <legend class="legend"><span><?= $block->escapeHtml(__('Write Us')) ?></span></legend><br />
         <div class="field note no-label"><?= $block->escapeHtml(__('Jot us a note and we’ll get back to you as quickly as possible.')) ?></div>
-        <div class="owl-carousel-wrapper">
-            <?= $block->getChildHtml('contactForm.slider'); ?>
-        </div>
+
         <div class="field gender-radio">
             <input type="radio" name="radio" id="radio-mr">
             <label class="label" for="radio-mr">Mr</label>

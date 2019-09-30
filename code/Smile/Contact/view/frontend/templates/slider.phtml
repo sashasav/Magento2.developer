@@ -1,15 +1,15 @@
 <h3>Slider owl</h3>
     <div class="owl-carousel owl-theme">
-        <div class="item">Your Content 1 My content 1</div>
-        <div class="item">Your Content 2 My content 2</div>
-        <div class="item">Your Content 3 My content 3</div>
-        <div class="item">Your Content 4 My content 4</div>
-        <div class="item">Your Content 5 My content 5</div>
-        <div class="item">Your Content 6 My content 6</div>
-        <div class="item">Your Content 7 My content 7</div>
-        <div class="item">Your Content 8 My content 8</div>
-        <div class="item">Your Content 9 My content 9</div>
-        <div class="item">Your Content 10 My content 10</div>
+        <div class="item">My content 1</div>
+        <div class="item">My content 2</div>
+        <div class="item">My content 3</div>
+        <div class="item">My content 4</div>
+        <div class="item">My content 5</div>
+        <div class="item">My content 6</div>
+        <div class="item">My content 7</div>
+        <div class="item">My content 8</div>
+        <div class="item">My content 9</div>
+        <div class="item">My content 10</div>
     </div>
 <script>
     require([
@@ -24,10 +24,8 @@
                 loop: false,
                 margin: 15,
                 autoWidth: true,
-                responsiveClass: true,
                 responsive: {
                     0:{
-                        items:3,
                         nav:false,
                         center: false
                     },
@@ -38,12 +36,15 @@
                     },
                     1024:{
                         items:3,
-                        nav:true
+                        nav:true,
+                        loop: true,
+                        autoWidth: false
                     },
                     1440:{
                         items:4,
                         nav:true,
-                        loop:true
+                        loop:true,
+                        autoWidth: false
                     }
                 }
             });
