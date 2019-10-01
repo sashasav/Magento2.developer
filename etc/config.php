@@ -166,6 +166,7 @@ return [
         'Magento_Wishlist' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
+        'Smile_Catalog' => 1,
         'Smile_Contact' => 1
     ]
 ];
