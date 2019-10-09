@@ -13,7 +13,7 @@ define([
                 var counter = qty.val();
                 console.log('test MINUS');
                 counter--;
-                qty.val(counter < 1 ? 0 : counter);
+                qty.val(counter < 1 ? 1 : counter);
                 console.log(counter);
             });
         }

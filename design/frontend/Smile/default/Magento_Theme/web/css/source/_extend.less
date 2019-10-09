@@ -1,0 +1,44 @@
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .footer {
+        &.content {
+            border-top: none;
+
+            .block {
+                float: none;
+            }
+
+            ul {
+                padding-right: 50px;
+            }
+
+            .switcher.store {
+                display: block;
+                margin: 0;
+            }
+
+            .links {
+                display: block;
+                padding: 0;
+                vertical-align: top;
+
+                li {
+                    background: transparent;
+                    border: none;
+                    font-size: 14px;
+                    margin: 0 0 8px;
+                    padding: 0;
+                }
+
+                a,
+                strong {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

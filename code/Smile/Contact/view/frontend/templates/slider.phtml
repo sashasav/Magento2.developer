@@ -11,43 +11,16 @@
         <div class="item">My content 9</div>
         <div class="item">My content 10</div>
     </div>
-<script>
-    require([
-        'jquery',
-        'jquery/ui',
-        'owl'
-    ], function ($) {
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                center: true,
-                nav:true,
-                loop: false,
-                margin: 15,
-                autoWidth: true,
-                responsive: {
-                    0:{
-                        nav:false,
-                        center: false
-                    },
-                    768:{
-                        items:3,
-                        nav:true,
-                        center: false
-                    },
-                    1024:{
-                        items:3,
-                        nav:true,
-                        loop: true,
-                        autoWidth: false
-                    },
-                    1440:{
-                        items:4,
-                        nav:true,
-                        loop:true,
-                        autoWidth: false
-                    }
-                }
-            });
-        });
-    });
+<script type="text/x-magento-init">
+
+    {
+        ".owl-carousel": {
+            "js/sliderinit": {
+                "items": 2,
+                "margin": 10,
+                "dots": false,
+                "loop": false
+            }
+        }
+    }
 </script>

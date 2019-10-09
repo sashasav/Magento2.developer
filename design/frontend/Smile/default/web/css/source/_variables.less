@@ -1,4 +1,6 @@
 @font-family-name__base: 'Open Sans';
+@family-name: @font-family-name__base;
+
 @icon-error: '\e61f';
 @icon-success: '\e60e';
 @icon-edit: '\e601';
@@ -8,12 +10,27 @@
 @icon-private: '\e629';
 @icon-present: '\e62a';
 @icon-gift-registry: '\e62b';
+@icon-next: '/';
 
 @icon-calendar__font-size: 23px;
-@block-items__counter__color: @color-gray43;
 
+@block-items__counter__color: @color-gray43;
 @button-primary__background: #000;
 @sidebar__background-color: aqua;
-@family-name: @font-family-name__base;
-// @family-name: Arial, sans-serif;
-// @font-family-name__base: Arial, sans-serif;
+@color-gray-middle5: #B02083;
+@footer-follow-icon: #444;
+@footer-links-bottom-copyright: #777777;
+@footer-links-bottom: #545454;
+
+.footer-follow-icon(@footer-follow-img) {
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(@footer-follow-img);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+}
