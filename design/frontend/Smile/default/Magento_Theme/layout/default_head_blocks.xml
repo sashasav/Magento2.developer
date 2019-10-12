@@ -10,5 +10,7 @@
         <css src="css/source/select2.css"/>
         <css src="css/source/owl.carousel.min.css"/>
         <css src="css/source/owl.theme.default.min.css"/>
+        <link src="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" src_type="url" type="text/css" />
+
     </head>
 </page>

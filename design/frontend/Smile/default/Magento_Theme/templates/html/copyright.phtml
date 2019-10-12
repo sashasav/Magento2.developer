@@ -4,10 +4,45 @@
  * See COPYING.txt for license details.
  */
 ?>
-<small class="copyright">
-    <span><?= $block->escapeHtml($block->getCopyright()) ?></span>
-</small>
-test copy
+
+<div class="footer-links-bottom footer content">
+    <small class="links-bottom copyright display-large">
+        <span><?= $block->escapeHtml($block->getCopyright()) ?></span>
+    </small>
+    <div class="links-bottom links-bottom-address">
+        <div class="links-container">
+            <a href="#" class="bottom-address">Avenue of the American Ind., st.133/2, New York City, USA</a>
+        </div>
+    </div>
+    <div class="links-bottom links-bottom-telephone display-all">
+        <div class="links-container">
+            <span class="bottom-telephone">Call Us:</span>
+            <a href="tel:+380979895555" class="bottom-phone">+38 (097) 989-55-55</a>
+            <span>or</span>
+            <a href="tel:+380991235555" class="bottom-phone">+38 (099) 123-55-55</a>
+        </div>
+    </div>
+    <ul class="links-bottom bottom-payments ul-display-inline">
+        <li><a href="#" class="payments-visa"><img src='<?php echo $this->getViewFileUrl('images/payments-visa.png'); ?>' alt="visa"></a></li>
+        <li><a href="#" class="payments-paypal"><img src='<?php echo $this->getViewFileUrl('images/payments-paypal.png'); ?>' alt="paypal"></a></li>
+        <li><a href="#" class="payments-master"><img src='<?php echo $this->getViewFileUrl('images/payments-master.png'); ?>' alt="master"></a></li>
+        <li><a href="#" class="payments-wu"><img src='<?php echo $this->getViewFileUrl('images/payments-wu.png'); ?>' alt="wu"></a></li>
+    </ul>
+
+<!--  options  -->
+
+    <small class="links-bottom copyright display-small">
+        <span><?= $block->escapeHtml($block->getCopyright()) ?></span>
+    </small>
+    <div class="links-bottom links-bottom-telephone display-med">
+        <div class="links-container">
+            <span class="bottom-telephone">Call Us:</span>
+            <a href="tel:+380979895555" class="bottom-phone">+38 (097) 989-55-55</a>
+            <span>or</span>
+            <a href="tel:+380991235555" class="bottom-phone">+38 (099) 123-55-55</a>
+        </div>
+    </div>
+</div>
 
 <script type="text/x-magento-init">
     {

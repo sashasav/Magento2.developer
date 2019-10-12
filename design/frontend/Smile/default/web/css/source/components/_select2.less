@@ -1,0 +1,39 @@
+& when (@media-common = true) {
+    .select2-container--open .select2-dropdown--below {
+        // border-color: #e8e9ec;
+        border-color: transparent;
+        border-radius: 0;
+        -webkit-box-shadow: 1px 9px 5px 0px rgba(203, 203, 203, 1);
+        -moz-box-shadow: 1px 9px 5px 0px rgba(203, 203, 203, 1);
+        box-shadow: 1px 9px 5px 0px rgba(203, 203, 203, 1);
+        color: #8d929a;
+    }
+
+    .select2-results {
+
+        .select2-results__options {
+            padding: 5px;
+
+            .select2-results__option {
+                border-top: 1px solid #e8e9ec;
+                padding-left: 30px;
+            }
+
+            .select2-results__option.select2-results__option--highlighted[aria-selected] {
+                background-color: #f5f6f7;
+                color: #8d929a;
+                border-color: transparent;
+
+                + .select2-results__option {
+                    border-color: transparent;
+                }
+            }
+        }
+
+        ul, ol {
+            & > li {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

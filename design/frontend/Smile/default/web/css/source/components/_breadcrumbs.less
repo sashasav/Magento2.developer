@@ -1,0 +1,38 @@
+& when (@media-common = true) {
+    .breadcrumbs {
+        font-size: 16px;
+        line-height: 18px;
+
+        a {
+            color: #717782;
+
+            &:visited {
+                color: #717782;
+            }
+        }
+
+        .item:not(:last-child):after {
+            color: #717782;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .item.home {
+            a {
+                padding-left: 30px;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    background-image: url('../images/home.svg');
+                    width: 18px;
+                    height: 22px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
