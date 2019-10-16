@@ -25,5 +25,20 @@
             <block class="Magento\Framework\View\Element\Template" name="footer_links_new" template="Magento_Theme::footer-links-new.phtml" />
 <!--            <block class="Magento\Framework\View\Element\Template" name="footer_links_bottom" template="Magento_Theme::footer-links-bottom.phtml" />-->
         </referenceContainer>
+
+<!--    sliders    -->
+
+        <move element="default" destination="custom-content" />
+
+        <referenceContainer name="main">
+            <container name="custom-content" htmlTag="div" htmlClass="custom-content">
+                <block class="Magento\Cms\Block\Block" name="recommended">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">recommended.products</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="main_distributors" template="Magento_Theme::distributors.phtml" />
+            </container>
+        </referenceContainer>
     </body>
 </page>

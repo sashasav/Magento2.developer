@@ -1,0 +1,170 @@
+& when (@media-common = true) {
+    .distributors.owl-theme {
+        padding: 22px 0 64px;
+        border-bottom: 1px solid @distributors-border-outer;
+
+        .owl-item {
+            &:not(.center) {
+                .item {
+                    margin: 0 auto;
+                }
+            }
+
+            &.active.center {
+                .item {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .owl-dots {
+            position: absolute;
+            right: 0;
+            counter-reset: pagination-dots;
+
+            button.owl-dot {
+                zoom: 1.8;
+                box-shadow: none;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    counter-increment: pagination-dots;
+                    content: counter(pagination-dots);
+                    font-size: 8px;
+                    color: @owl-dot-color;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                span {
+                    margin: 0 0 0 5px;
+                    background-color: @owl-dot-background;
+                }
+
+                &.active {
+                    span {
+                        background-color: @owl-dot-active-background;
+                    }
+
+                    &::before {
+                        color: @owl-dot-active-color;
+                    }
+                }
+            }
+        }
+
+        .item {
+            width: 144px;
+            height: 101px;
+            border: 1px solid @distributors-border-item;
+            text-align: center;
+            font-size: 28px;
+            line-height: 101px;
+            color: @distributors-color;
+            font-family: "Lavanderia", sans-serif;
+        }
+
+        .owl-nav {
+            margin: 0;
+
+            [class*="owl-"]:hover {
+                background-color: @distributors-slider-btn-hover-background;
+                &::before {
+                    border-color: @distributors-slider-btn-hover-color;
+                }
+            }
+
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-42px);
+                padding: 0 16px;
+                width: 33px;
+                height: 33px;
+                background-color: transparent;
+                border-radius: 0;
+
+                span {
+                    display: none;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    display: block;
+                    z-index: 9;
+                    border-top: 1px solid @distributors-slider-btn-color;
+                    border-left: 1px solid @distributors-slider-btn-color;
+                }
+            }
+
+            .owl-prev {
+                &::before {
+                    //background-image: url("../images/arrow-left.png");
+                    transform: translateY(-50%) rotate(-45deg);
+                    left: 13px;
+                }
+            }
+
+            .owl-next {
+                &::before {
+                    //background-image: url("../images/arrow-right.png");
+                    transform: translateY(-50%) rotate(135deg);
+                    right: 13px;
+                }
+            }
+        }
+
+        button:not(.primary) {
+            box-shadow: none;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .distributors {
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                left: 1px;
+            }
+
+            .owl-next {
+                right: 1px;
+                left: auto;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .distributors {
+        .owl-dots {
+            top: -54px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .distributors {
+        .owl-dots {
+            top: -45px;
+        }
+
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                left: -53px;
+            }
+
+            .owl-next {
+                right: -53px;
+                left: auto;
+            }
+        }
+    }
+}

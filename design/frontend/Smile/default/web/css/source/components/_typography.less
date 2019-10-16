@@ -11,7 +11,19 @@
         background-color: @body-background-color;
     }
 
+    .page-main {
+        background-color: @page-main-background;
+        margin-bottom: 22px;
+    }
+
     ul.ul-display-inline > li {
         display: inline-block;
     }
+
+    .lib-font-face(
+        @family-name: @font-family-name__lavanderia,
+        @font-path: '@{baseDir}fonts/lavanderia//Lavanderia_Sturdy',
+        @font-weight: 400,
+        @font-style: normal
+    );
 }
